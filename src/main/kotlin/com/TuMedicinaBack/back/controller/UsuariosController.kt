@@ -25,18 +25,9 @@ class UsuariosController {
 
     @PostMapping("/insertar")
 
-    fun insertar(@RequestBody Usuarios: usuarios):  usuarios = Usuarios.apply {
+    fun insertar(@RequestBody usuarios: usuarios):  usuarios = usuarios.apply {
 
-        documento = this.documento.toString()
-        primerNombre = this.primerNombre.toString()
-        segundoNombre = this.segundoNombre.toString()
-        primerApellido =  this.primerApellido.toString()
-        segundoApellido = this.segundoApellido.toString()
-        usuario = this.usuario.toString()
-        contrasena = this.contrasena.toString()
-        tipoDocumento = this.tipoDocumento.toString()
-        correo = this.correo.toString()
-        fechaNacimiento = this.fechaNacimiento.toString()
+        usuarioRepository.save(usuarios)
 
     }
 }

@@ -1,5 +1,6 @@
 package com.TuMedicinaBack.back.models
 
+import org.springframework.context.annotation.Primary
 import java.sql.Date
 import javax.persistence.*
 
@@ -8,6 +9,9 @@ class usuarios {
 
     @Id
       @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    var id =1
+
     var documento =""
 
     @Column
