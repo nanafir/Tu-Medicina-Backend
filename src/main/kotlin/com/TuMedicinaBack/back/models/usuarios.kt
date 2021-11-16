@@ -31,7 +31,7 @@ class usuarios {
     @Column
     var correo =""
     @Column
-    var fechaNacimiento= " "
+    var fechaNacimiento=" "
 
 
 } 
